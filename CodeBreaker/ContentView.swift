@@ -11,14 +11,27 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            pegs(colors: [.red, .blue, .yellow, .green])
+            pegs(colors: [.yellow, .green, .blue, .red])
+            pegs(colors: [.green, .yellow, .red, .blue])
         }
         .padding()
     }
+    
+    func pegs(colors: Array<Color> = []) -> some View {
+        HStack{
+            Circle().foregroundStyle(colors[0])
+            Circle().foregroundStyle(colors[1])
+            Circle().foregroundStyle(colors[2])
+            Circle().foregroundStyle(colors[3])
+        }
+    }
 }
+
+
+
+
+
 
 #Preview {
     ContentView()
