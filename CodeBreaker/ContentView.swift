@@ -18,6 +18,8 @@ struct ContentView: View {
         .padding()
     }
     
+    
+    
     func pegs(colors: Array<Color> = []) -> some View {
         HStack{
             Circle().foregroundStyle(colors[0])
